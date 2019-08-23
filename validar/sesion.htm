@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+    function validarform() {
+
+// Validación DOM
+
+var x = document.forms["formweb"]["mail"].value;
+var y = document.forms["formweb"]["password"].value;
+    
+if ((x == "")||(y == "")) {
+    alert("Debe ingresar datos requeridos");
+    return false;
+  }
+}  
+
+</script>
+
+    
+    
+<body>
+
+<div class="container">
+  <h2>Validaci&oacute;n de Formulario - Programaci&oacute;n Front End</h2>
+    <br>
+    <br>
+  <form name="formweb"  method="get" onSubmit="return validarform();">
+    <div class="form-group">      
+      <input type="text" class="form-control" id="mail" name="mail" placeholder="Ingresar Mail">
+    </div>
+    <div class="form-group">          
+      <input type="text" class="form-control" id="password" name="password" placeholder="Ingresar Password">
+    </div>
+   <div class="checkbox">
+      <label><input type="checkbox">Recordarme</label>
+    </div> 
+
+    <button type="submit" class="btn btn-default">Enviar Informaci&oacute;n</button>
+  </form>
+</div>
+
+</body> 
+</html>
